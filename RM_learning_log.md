@@ -21,5 +21,13 @@
 
 
 
+<<<<<<< Updated upstream
   
+=======
+-   I successfully conpiler the files to use for robot contest, with the guidance of our captain .
+
+-   I use vscode to do the homework writing stuff. mp10.
+
+    
+>>>>>>> Stashed changes
 
