@@ -26,3 +26,10 @@
 - git 的 rebase conflict 真的难崩,  各种不行. 我TM 无语了.
 - 学习ROS ROS2control基础和代码实际操作
 - 学习接线.
+- 重新制定ros学习计划, 根据 ros docs [tutorials](https://docs.ros.org/en/humble/Tutorials/Intermediate.html) + [How to guides](https://docs.ros.org/en/humble/How-To-Guides.html)
+- YOUTUBE 课程 https://www.youtube.com/@ArticulatedRobotics
+
+- https://missing.csail.mit.edu/2020/
+
+具体学习日志:
+
