@@ -10,7 +10,7 @@ At its core, **ros2_control is just a scheduler + plugin system**:
   - Each controller declares what interfaces it *claims* (e.g. `joint1/position` command interface).
   - Inside `update()` it uses state interfaces and writes to command interfaces.
 - **Controller manager (`ros2_control_node`)** → the orchestrator.
-  - Loads hardware plugin(s).
+  - >Loads hardware plugin(s).
   - Loads controllers (via pluginlib).
   - Every cycle: `read()` hardware → run controllers → `write()` hardware.
 

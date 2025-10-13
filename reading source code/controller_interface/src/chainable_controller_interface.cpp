@@ -38,7 +38,7 @@ return_type ChainableControllerInterface::update(
       return ret;
     }
   }
-
+    
   ret = update_and_write_commands(time, period);
 
   return ret;

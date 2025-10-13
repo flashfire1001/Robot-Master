@@ -63,7 +63,7 @@ git clone https://github.com/ros-controls/ros2_control_demos -b humble
 # then you can build the repo
 cd ~/ros_demo_ws/
 . /opt/ros/${ROS_DISTRO}/setup.sh
-colcon build --merge-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 ln -sf build/compile_commands.json compile_commands.json
 # 在这之后,即直接用launch 命令就可以看到gazebo/rviz simulation的效果了,要source 防止出现package not found.
 source ~/ros_demo_ws/install/setup.bash
@@ -75,7 +75,7 @@ ros2 launch ros2_control_demo_example_1 view_robot.launch.py
 
 进一步:
 
-- 官方hardware interface的教程(学习ROS_control设计逻辑和重要的class/member)
+- 官方hardware interface的教程(学习ROS_control设计逻辑和重要的class/member)>
 - 看ros/execution/meta_hardware 这里要知道每个class, 结合hardware_interface的源代码
 - 看ros/decomposition/gimbal_controller 此处结合control_interface 源代码
 
@@ -88,19 +88,13 @@ ros2 launch ros2_control_demo_example_1 view_robot.launch.py
 Here is my example, using 
 
 - velocity
-- effort (PID)
-
-我的代码框架大致如下:
-
-```text
-
-```
+- effort (PID -> velocity to effort)
 
 ### (iv) Debug and deploy : Anyway, you are near the final success!
 
-本人的debug log:
+本人的debug notes:
 
-> 
+-  写一部分, debug 一部分, 这会防止出现复杂的相互依赖的错误.
 
 - 当你写完后, 进入配置环节: 也就是 urdf, yaml机器配置文件(当然, 一般你应该先写好这部分, 再思考控制逻辑) + package.xml 和cmake.list的编译依赖文件 + 自动初始化  launch.py脚本. 这三者对新手很不友好(先说清楚了)
 - 看队长写的或者网上的教程, 搞懂urdf和yaml的配置文件的意思,launch脚本的机理.(至于如何build,关于cmakelist 和package.xml请问ai/学长) --- 总之, 这里有别人带着你是最好的, 不然只有AI还是很痛苦的. 不管怎么样, 刚开始都是痛苦的, 慢慢的写过几个项目后你就可以独立地写它了.
@@ -126,10 +120,10 @@ Remember. new/strange always comes with challenges. Never let them stop you from
 Check Box: help keep you on track!
 
 - [x] review the basic concepts 
-- [ ] run and check the demo 1,2,3 or more.
+- [x] run and check the demo 1,2,3 or more.
 - [x] look through the source code as well as demo code.
-- [ ] look through the [team](https://github.com/Meta-Team/Meta-ROS) code, find their control logic/ sort out a class/method table for you to further refer to as a resource.
-- [ ] start coding your own controller!
-- [ ] debug it and work with dependency / other issues
+- [x] look through the [team](https://github.com/Meta-Team/Meta-ROS) code, find their control logic/ sort out a class/method table for you to further refer to as a resource.
+- [x] start coding your own controller!
+- [x] debug it and work with dependency / other issues
 - [ ] finalize your first project(though it's primary) and deploy it! 
 - [ ] share it with your friends. They will be proud of you! :joy:
