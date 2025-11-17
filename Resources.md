@@ -19,3 +19,39 @@ STEM32: [STM32入门教程-2023版 bilibili](https://www.bilibili.com/video/BV1t
 [vision-1]: http://www.google.com/
 [runoob]: http://www.runoob.com/
 
+Roadmap to Learn Ros:
+A direct task - oriented approach
+
+Your central task:
+Learn Ros and accomplish (write) a ros controller.
+
+(i) review basics:
+• Concepts like topic, node, node with lifecycle, composable node.
+
+• The ros cli tools
+
+• ros - control: controller, hardware component/controller interface: command/state/reference. manager.
+
+(ii) dive into code!!!
+• project architecture:
+
+  • dependency (specified by Cmakelist/package.xml...)
+
+  • folded include/build/src. install
+
+• Code pieces:
+
+  • What is a topic & node
+
+  • how they subscribe/publish
+
+  • how to launch the robot
+
+(iii) Curve out your sketch your controlling logic task: where should you modify?
+• velocity
+
+• effort (PID)
+
+Remember. new/strange always comes with challenges. Never let them stop you from attempts & progress
+
+https://elec.marslab.xyz
